@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_24">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:gravity="start|center_vertical"
+                android:text="@string/profile_id_upload_required_photos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_large_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toTopOf="@+id/image_view_front_side"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_front_side"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_200"
+                android:background="@drawable/border_color_green_with_corners"
+                android:padding="@dimen/padding_16"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/image_view_back_side"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_front_side"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/profile_id_front"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="@+id/image_view_front_side"
+                app:layout_constraintEnd_toEndOf="@+id/image_view_front_side"
+                app:layout_constraintStart_toStartOf="@+id/image_view_front_side"
+                app:layout_constraintTop_toTopOf="@+id/image_view_front_side" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_back_side"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_200"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/border_color_green_with_corners"
+                android:padding="@dimen/padding_16"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_upload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_front_side" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_back_side"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/profile_id_back"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="@+id/image_view_back_side"
+                app:layout_constraintEnd_toEndOf="@+id/image_view_back_side"
+                app:layout_constraintStart_toStartOf="@+id/image_view_back_side"
+                app:layout_constraintTop_toTopOf="@+id/image_view_back_side" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_upload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/rectangle_gradient_green_with_corner"
+                android:gravity="center"
+                android:padding="@dimen/padding_16"
+                android:text="@string/profile_id_upload"
+                android:textColor="@color/colorTextRegular"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_view_cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_back_side"
+                app:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/rectangle_gradient_red_with_corner"
+                android:gravity="center"
+                android:padding="@dimen/padding_16"
+                android:text="@string/profile_cancel"
+                android:textColor="@color/colorTextRegular"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_upload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_upload"
+                app:layout_constraintTop_toTopOf="@+id/text_view_upload"
+                app:textAllCaps="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

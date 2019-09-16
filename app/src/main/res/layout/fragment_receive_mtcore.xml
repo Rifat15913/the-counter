@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout_bottom_app_bar_container"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottom_app_bar"
+                style="@style/Widget.MaterialComponents.BottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:backgroundTint="@color/colorShapedBackground"
+                app:fabAlignmentMode="center"
+                app:fabCradleMargin="8dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_receive_top"
+                app:elevation="@dimen/elevation_2"
+                app:fabCustomSize="70dp"
+                app:layout_anchor="@+id/bottom_app_bar"
+                app:maxImageSize="70dp" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <View
+            android:id="@+id/view_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorShapedBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coordinator_layout_bottom_app_bar_container" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_qr_code"
+            android:layout_width="@dimen/width_200"
+            android:layout_height="@dimen/height_200"
+            android:layout_marginTop="@dimen/margin_16"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_background"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_64"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="@integer/single_line"
+            android:padding="@dimen/padding_8"
+            android:singleLine="true"
+            android:textSize="@dimen/text_small_body"
+            app:fontFamily="@font/regular"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_generate_new_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_qr_code" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_copy_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_8"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_view_address"
+            app:layout_constraintTop_toTopOf="@+id/text_view_address"
+            app:srcCompat="@drawable/ic_copy_square" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_generate_new_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginEnd="@dimen/margin_64"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="@integer/single_line"
+            android:padding="@dimen/padding_8"
+            android:singleLine="true"
+            android:text="@string/mtcore_wallet_details_generate_address"
+            android:textColor="@color/colorTextRegularSecondary"
+            android:textSize="@dimen/text_body"
+            app:fontFamily="@font/semi_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_address" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

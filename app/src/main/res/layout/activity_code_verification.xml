@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_background"
+        android:focusableInTouchMode="true">
+
+        <com.itechsoftsolutions.mtcore.main.ui.base.widget.CustomStatusBarView
+            android:id="@+id/status_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/scroll_view_body_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view_body_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_view_navigator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_24"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:padding="@dimen/padding_8"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_view_title"
+                    app:layout_constraintEnd_toStartOf="@+id/text_view_title"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_view_title"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_back"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_title"
+                    style="@style/AppComponent.TextView.Title"
+                    android:text="@string/code_verification_title"
+                    app:layout_constraintBottom_toTopOf="@+id/image_view_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_view_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_logo_with_text"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_subtitle"
+                    style="@style/AppComponent.TextView.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_marginBottom="@dimen/margin_32"
+                    android:paddingStart="@dimen/padding_32"
+                    android:paddingEnd="@dimen/padding_32"
+                    android:text="@string/code_verification_subtitle"
+                    app:layout_constraintBottom_toTopOf="@+id/pin_entry_edit_text_code_verification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image_view_logo"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <com.alimuzaffar.lib.pin.PinEntryEditText
+                    android:id="@+id/pin_entry_edit_text_code_verification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:layout_marginEnd="@dimen/margin_32"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/colorTextRegular"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/text_body"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_request"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_subtitle"
+                    app:pinAnimationType="fromBottom"
+                    app:pinBackgroundDrawable="@drawable/border_color_secondary"
+                    app:pinBackgroundIsSquare="true"
+                    app:pinTextBottomPadding="14dp"/>
+
+                <TextView
+                    android:id="@+id/text_view_request"
+                    style="@style/AppButton.Common"
+                    android:layout_marginStart="@dimen/margin_32"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_marginEnd="@dimen/margin_32"
+                    android:text="@string/code_verification_verify"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pin_entry_edit_text_code_verification"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

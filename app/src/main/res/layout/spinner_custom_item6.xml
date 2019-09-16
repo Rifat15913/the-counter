@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="start"
+    android:paddingStart="@dimen/padding_4"
+    android:paddingTop="@dimen/padding_12"
+    android:paddingEnd="@dimen/padding_4"
+    android:paddingBottom="@dimen/padding_12"
+    android:textAllCaps="false"
+    android:textColor="@color/colorTextRegular"
+    android:textSize="@dimen/text_small_body"
+    app:fontFamily="@font/semi_bold" />

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_16">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_first_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_0"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:maxLines="3"
+            android:singleLine="false"
+            app:layout_constraintHorizontal_weight="5"
+            android:textColor="@color/colorTextRegular"
+            android:textSize="@dimen/text_small_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_second_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="false"
+            tools:text="Software" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_second_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:maxLines="3"
+            android:singleLine="false"
+            app:layout_constraintHorizontal_weight="4"
+            android:textColor="@color/colorTextRegular"
+            android:textSize="@dimen/text_small_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_third_field"
+            app:layout_constraintStart_toEndOf="@+id/text_view_first_field"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="false"
+            tools:text="Price" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_third_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:maxLines="3"
+            app:layout_constraintHorizontal_weight="4"
+            android:singleLine="false"
+            android:textColor="@color/colorTextRegular"
+            android:textSize="@dimen/text_small_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_view_second_field"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="false"
+            tools:text="Status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

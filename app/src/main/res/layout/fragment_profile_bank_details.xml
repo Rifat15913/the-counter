@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_bank"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/padding_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_empty_placeholder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:padding="@dimen/padding_16"
+            android:text="@string/no_item_found"
+            android:textSize="@dimen/text_large_body"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/recycler_view_bank"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_view_bank"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view_bank"
+            app:layout_constraintTop_toTopOf="@+id/recycler_view_bank"
+            app:textAllCaps="false" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:src="@drawable/ic_circular_plus"
+            app:elevation="@dimen/elevation_2"
+            app:fabCustomSize="56dp"
+            app:maxImageSize="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

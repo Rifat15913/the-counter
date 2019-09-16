@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rectangle_color_disabled_gray_with_corner" android:state_enabled="false" />
+    <item android:drawable="@drawable/border_color_green_with_corners" />
+</selector>

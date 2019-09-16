@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_share_my_referral_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_share_my_referral_container"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="@drawable/gradient_color_green">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_share_my_referral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                app:fontFamily="@font/bold"
+                android:gravity="center"
+                android:textSize="@dimen/text_small_body"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:textAllCaps="true"
+                android:text="@string/my_referral_share_my_referral"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="5"
+                app:layout_constraintEnd_toStartOf="@+id/image_view_copy_url"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_copy_url"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHorizontal_weight="1"
+                app:srcCompat="@drawable/ic_copy"
+                app:layout_constraintEnd_toStartOf="@+id/image_view_facebook"
+                app:layout_constraintStart_toEndOf="@+id/text_view_share_my_referral"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_facebook"
+                android:layout_width="0dp" android:layout_height="0dp"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_margin="@dimen/margin_16"
+                app:layout_constraintDimensionRatio="1:1"
+                app:srcCompat="@drawable/ic_facebbok"
+                app:layout_constraintStart_toEndOf="@+id/image_view_copy_url"
+                app:layout_constraintEnd_toStartOf="@+id/image_view_twitter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_twitter"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_twitter"
+                android:layout_width="0dp" android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@+id/image_view_facebook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

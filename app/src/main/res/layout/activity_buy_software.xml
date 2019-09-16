@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_background">
+
+        <com.itechsoftsolutions.mtcore.main.ui.base.widget.CustomStatusBarView
+            android:id="@+id/status_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:fontFamily="@font/bold"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_large_body"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_body_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_bar"
+            tools:text="Hi, Man" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_navigator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            android:padding="@dimen/padding_8"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_title"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_view_title"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_body_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinator_layout_bottom_app_bar_container"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                app:layout_constraintBottom_toTopOf="@+id/scroll_view_body_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.bottomappbar.BottomAppBar
+                    android:id="@+id/bottom_app_bar"
+                    style="@style/Widget.MaterialComponents.BottomAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:backgroundTint="@color/colorShapedBackground"
+                    app:fabAlignmentMode="center"
+                    app:fabCradleMargin="8dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_software_license_top"
+                    app:elevation="@dimen/elevation_2"
+                    app:fabCustomSize="70dp"
+                    app:layout_anchor="@+id/bottom_app_bar"
+                    app:maxImageSize="70dp" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_view_body_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorShapedBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coordinator_layout_bottom_app_bar_container">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_software_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextRegularSecondary"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view_separator_software_price"
+                        app:layout_constraintEnd_toStartOf="@+id/text_view_software_price_amount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        app:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_software_price_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_software_price"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_software_price"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_software_price"
+                        app:textAllCaps="false" />
+
+                    <View
+                        android:id="@+id/view_separator_software_price"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_2"
+                        android:background="@color/colorMyWalletsTabSeparator"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_fees"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_software_price" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_fees"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextRegularSecondary"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view_separator_fees"
+                        app:layout_constraintEnd_toStartOf="@+id/text_view_fees_amount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_separator_software_price"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        app:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_fees_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_fees"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_fees"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_fees"
+                        app:textAllCaps="false" />
+
+                    <View
+                        android:id="@+id/view_separator_fees"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_2"
+                        android:background="@color/colorMyWalletsTabSeparator"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_subtotal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_fees" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_subtotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextRegularSecondary"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view_separator_subtotal"
+                        app:layout_constraintEnd_toStartOf="@+id/text_view_subtotal_amount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_separator_fees"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        app:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_subtotal_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_subtotal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_subtotal"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_subtotal"
+                        app:textAllCaps="false" />
+
+                    <View
+                        android:id="@+id/view_separator_subtotal"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_2"
+                        android:background="@color/colorMyWalletsTabSeparator"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_vat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_subtotal" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_vat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextRegularSecondary"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view_separator_vat"
+                        app:layout_constraintEnd_toStartOf="@+id/text_view_vat_amount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_separator_subtotal"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        app:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_vat_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_vat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_vat"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_vat"
+                        app:textAllCaps="false" />
+
+                    <View
+                        android:id="@+id/view_separator_vat"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_2"
+                        android:background="@color/colorMyWalletsTabSeparator"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_total"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_vat" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextRegularSecondary"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view_separator_total"
+                        app:layout_constraintEnd_toStartOf="@+id/text_view_total_amount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_separator_vat"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        app:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="@integer/single_line"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_body"
+                        app:fontFamily="@font/semi_bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_total"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_total"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_total"
+                        app:textAllCaps="false" />
+
+                    <View
+                        android:id="@+id/view_separator_total"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_2"
+                        android:background="@color/colorMyWalletsTabSeparator"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_select_payment_method"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_total" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_select_payment_method"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/padding_16"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:text="@string/buy_software_select_payment_method"
+                        android:textSize="@dimen/text_large_body"
+                        app:fontFamily="@font/bold"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_card"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/view_separator_total"
+                        app:textAllCaps="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:drawableStart="@drawable/radio_button_custom_circle"
+                        android:drawablePadding="@dimen/padding_8"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="@string/buy_software_bank"
+                        app:layout_constraintEnd_toStartOf="@+id/text_view_card"
+                        android:gravity="start|center_vertical"
+                        android:paddingTop="@dimen/padding_8"
+                        android:paddingBottom="@dimen/padding_8"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_bank_body_container"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_select_payment_method" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_32"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:drawableStart="@drawable/radio_button_custom_circle"
+                        android:drawableEnd="@drawable/ic_cards"
+                        android:drawablePadding="@dimen/padding_8"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="start|center_vertical"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/padding_8"
+                        android:paddingBottom="@dimen/padding_8"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_view_bank"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/text_view_bank"
+                        app:layout_constraintTop_toTopOf="@+id/text_view_bank" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_layout_bank_body_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16"
+                        app:layout_constraintBottom_toTopOf="@+id/text_view_order"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_view_bank">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_bank"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_16"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_spinner_country_separator"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorSecondary"
+                            app:layout_constraintBottom_toTopOf="@+id/text_view_bank_address"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_bank" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_bank_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:text="@string/buy_software_bank_address"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_view_bank_address_content"
+                            app:layout_constraintEnd_toStartOf="@+id/text_view_bank_address_content"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_view_bank_address_content"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_bank_address_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|center_vertical"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toTopOf="@+id/text_view_bank_country_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_bank_address"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_bank" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_bank_country"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:text="@string/buy_software_bank_country"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_view_bank_country_content"
+                            app:layout_constraintEnd_toStartOf="@+id/text_view_bank_country_content"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_view_bank_country_content"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_bank_country_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|center_vertical"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toTopOf="@+id/text_view_bank_swift_code_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_bank_country"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view_bank_address_content" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_bank_swift_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:text="@string/buy_software_swift_code"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_view_bank_swift_code_content"
+                            app:layout_constraintEnd_toStartOf="@+id/text_view_bank_swift_code_content"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_view_bank_swift_code_content"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_bank_swift_code_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|center_vertical"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toTopOf="@+id/text_view_holder_name_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_bank_swift_code"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view_bank_country_content" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_holder_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:text="@string/buy_software_holder_name"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_view_holder_name_content"
+                            app:layout_constraintEnd_toStartOf="@+id/text_view_holder_name_content"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_view_holder_name_content"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_holder_name_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|center_vertical"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toTopOf="@+id/text_view_holder_address_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_holder_name"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view_bank_swift_code_content" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_holder_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:text="@string/buy_software_holder_address"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_view_holder_address_content"
+                            app:layout_constraintEnd_toStartOf="@+id/text_view_bank_address_content"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_view_holder_address_content"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_holder_address_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toTopOf="@+id/text_view_holder_iban_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_holder_address"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view_holder_name_content" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_holder_iban"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|top"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:text="@string/buy_software_holder_iban"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_view_holder_iban_content"
+                            app:layout_constraintEnd_toStartOf="@+id/text_view_holder_iban_content"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_view_holder_iban_content"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_view_holder_iban_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="start|center_vertical"
+                            android:paddingTop="@dimen/padding_8"
+                            android:paddingBottom="@dimen/padding_8"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="6"
+                            app:layout_constraintStart_toEndOf="@+id/text_view_holder_iban"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view_holder_address_content" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/text_view_order"
+                        style="@style/AppButton.Common"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_32"
+                        android:layout_marginTop="@dimen/margin_32"
+                        android:layout_marginEnd="@dimen/margin_32"
+                        android:text="@string/buy_software_order"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_bank_body_container" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

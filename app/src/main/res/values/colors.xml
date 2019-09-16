@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#80C753</color>
+    <color name="colorPrimaryDark">#80C753</color>
+    <color name="colorAccent">#AA670e</color>
+    <color name="colorSecondary">#E9E9E9</color>
+    <color name="colorDarkBackground">#2F2E34</color>
+    <color name="colorShapedBackground">#2E2E33</color>
+    <color name="colorDashboardItemDarkBackground">#3C3C48</color>
+    <color name="colorDrawerMenuItemSeparator">#45464B</color>
+    <color name="colorGreenGradientDeep">#4BB43E</color>
+    <color name="colorGreenGradientLight">#81DB5E</color>
+    <color name="colorMyWalletsTabSeparator">#807F8F</color>
+    <color name="colorMyRankingDropdown">#EDBA5D</color>
+    <color name="colorBottomBarBackground">#2C2B33</color>
+    <color name="colorBottomBarItemEnabled">#DCA01F</color>
+    <color name="colorBottomBarItemDisabled">#80808E</color>
+    <color name="colorPricingPanelItemBackground">#383844</color>
+    <color name="colorPricingPanelGreenGradientLight">#81DB5E</color>
+    <color name="colorPricingPanelGreenGradientDeep">#4BB43E</color>
+    <color name="colorPricingPanelRedGradientLight">#F3536D</color>
+    <color name="colorPricingPanelRedGradientDeep">#BA3026</color>
+
+    <!--Extra colors-->
+    <color name="colorTextPureBlack">#000000</color>
+    <color name="colorTextRegular">#FFFFFF</color>
+    <color name="colorTextRegularSecondary">#80808E</color>
+    <color name="colorTextHint">#80808E</color>
+    <color name="colorTextLight">#7E7777</color>
+    <color name="colorTextTitle">#FFFFFF</color>
+    <color name="colorPasswordToggle">#C4C4C4</color>
+
+    <color name="colorWeak">#FF0000</color>
+    <color name="colorNormal">#FFCC00</color>
+    <color name="colorStrong">#28DA20</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="disabledGray">#BCBCBC</color>
+    <color name="dottedLine">#C8C9CB</color>
+
+    <color name="colorCoffeeGradientStart">#F5DA9F</color>
+    <color name="colorCoffeeGradientEnd">#AA670E</color>
+    <color name="colorGreenGradientStart">#A3D562</color>
+
+    <!--Ripple-->
+    <color name="colorWhite26">#43FFFFFF</color>
+    <color name="colorWhite50">#80FFFFFF</color>
+    <color name="colorPrimary50">#8080C753</color>
+
+</resources>

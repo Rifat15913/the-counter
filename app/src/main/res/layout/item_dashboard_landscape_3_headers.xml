@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_8"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_8">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorTextPureBlack"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/semi_bold"
+                app:layout_constraintBottom_toTopOf="@+id/constraint_layout_body_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:textAllCaps="true"
+                tools:text="last month's top seller" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_resource"
+                android:layout_width="@dimen/width_60"
+                android:layout_height="@dimen/height_60"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                app:layout_constraintBottom_toTopOf="@+id/constraint_layout_body_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+                tools:src="@drawable/ic_consumer_brown" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_body_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_resource">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_header1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextRegularSecondary"
+                    android:textSize="@dimen/text_small_body"
+                    app:fontFamily="@font/semi_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_content1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:textAllCaps="true"
+                    tools:text="points" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_content1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_small_body"
+                    app:fontFamily="@font/semi_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_header2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_header1"
+                    app:textAllCaps="true"
+                    tools:text="0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_header2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextRegularSecondary"
+                    android:textSize="@dimen/text_small_body"
+                    app:fontFamily="@font/semi_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_content2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_content1"
+                    app:textAllCaps="true"
+                    tools:text="reward" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_content2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_small_body"
+                    app:fontFamily="@font/semi_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_header3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_header2"
+                    app:textAllCaps="true"
+                    tools:text="0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_header3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextRegularSecondary"
+                    android:textSize="@dimen/text_small_body"
+                    app:fontFamily="@font/semi_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_view_content3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_content2"
+                    app:textAllCaps="true"
+                    tools:text="reward" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_content3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_small_body"
+                    app:fontFamily="@font/semi_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_header3"
+                    app:textAllCaps="true"
+                    tools:text="0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

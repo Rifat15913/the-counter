@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_first_name"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_32"
+                android:hint="@string/profile_first_name"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_last_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_first_name"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_last_name"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/profile_last_name"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_first_name"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_last_name"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_email"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/profile_email"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_save_changes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_last_name"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_email"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_save_changes"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_32"
+                android:background="@drawable/rectangle_gradient_green_with_corner"
+                android:gravity="center"
+                android:padding="@dimen/padding_16"
+                android:text="@string/profile_save_changes"
+                android:textColor="@color/colorTextRegular"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_email"
+                app:textAllCaps="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

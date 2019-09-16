@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorShapedBackground"
+            android:padding="@dimen/padding_24">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_amount"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginStart="@dimen/margin_0"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_0"
+                android:hint="@string/mtcore_wallet_details_amount"
+                app:layout_constraintBottom_toTopOf="@+id/spinner_bank"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_amount"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_bank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_32"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_withdraw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_amount" />
+
+            <View
+                android:id="@+id/view_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorSecondary"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_bank"
+                app:layout_constraintStart_toStartOf="@+id/spinner_bank"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_bank" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_withdraw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/rectangle_gradient_green_with_corner"
+                android:gravity="center"
+                android:padding="@dimen/padding_16"
+                android:text="@string/mtr_wallet_withdraw"
+                android:textColor="@color/colorTextRegular"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_view_cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_bank"
+                app:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/rectangle_gradient_red_with_corner"
+                android:gravity="center"
+                android:padding="@dimen/padding_16"
+                android:text="@string/profile_cancel"
+                android:textColor="@color/colorTextRegular"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_withdraw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_withdraw"
+                app:layout_constraintTop_toTopOf="@+id/text_view_withdraw"
+                app:textAllCaps="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

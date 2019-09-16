@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_country_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_32"
+                android:gravity="start"
+                android:paddingStart="@dimen/padding_4"
+                android:paddingEnd="0dp"
+                android:text="@string/address_country"
+                android:textColor="@color/colorTextRegularSecondary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/medium"
+                app:layout_constraintBottom_toTopOf="@+id/spinner_country"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="@dimen/margin_20"
+                app:layout_constraintBottom_toTopOf="@+id/view_spinner_country_separator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_country_title" />
+
+            <View
+                android:id="@+id/view_spinner_country_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:background="@color/colorSecondary"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_state"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_country" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_state"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/address_state"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_zip_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_spinner_country_separator"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_state"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_zip_code"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/address_zip_code"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_state"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_zip_code"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_city"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/address_city"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_zip_code"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_city"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_address"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/address_address"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_city"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_address"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_number"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/address_number"
+                app:layout_constraintBottom_toTopOf="@+id/text_input_layout_complement"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_address"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_number"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_complement"
+                style="@style/Authentication.TextInputLayout"
+                android:layout_marginTop="@dimen/margin_16"
+                android:hint="@string/address_complement"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_save_changes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_number"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_complement"
+                    style="@style/Authentication.TextInputEditText"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingEnd="@dimen/padding_4"
+                    android:paddingBottom="@dimen/padding_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_save_changes"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_32"
+                android:background="@drawable/rectangle_gradient_green_with_corner"
+                android:gravity="center"
+                android:padding="@dimen/padding_16"
+                android:text="@string/profile_save_changes"
+                android:textColor="@color/colorTextRegular"
+                android:textSize="@dimen/text_small_body"
+                app:fontFamily="@font/bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_complement"
+                app:textAllCaps="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
