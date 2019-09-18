@@ -1,6 +1,6 @@
 <resources>
     <!--App Essentials-->
-    <string name="app_name">MTCore</string>
+    <string name="app_name">The Counter</string>
     <string name="file_provider_authority" translatable="false">com.itechsoftsolutions.mtcore.fileprovider</string>
     <string name="intent_type_image" translatable="false">image/*</string>
     <string name="intent_extra_return_data" translatable="false">return-data</string>

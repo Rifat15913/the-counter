@@ -42,6 +42,8 @@
     <color name="colorCoffeeGradientStart">#F5DA9F</color>
     <color name="colorCoffeeGradientEnd">#AA670E</color>
     <color name="colorGreenGradientStart">#A3D562</color>
+    <color name="colorLauncherIconGradientStart">#6A7D98</color>
+    <color name="colorLauncherIconGradientEnd">#00CDCD</color>
 
     <!--Ripple-->
     <color name="colorWhite26">#43FFFFFF</color>
