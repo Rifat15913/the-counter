@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.itechsoftsolutions.mtcore">
+    package="com.diaryofrifat.thecounter">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.itechsoftsolutions.mtcore.BaseApplication"
+        android:name="com.diaryofrifat.thecounter.BaseApplication"
         android:allowBackup="false"
         android:fullBackupContent="true"
         android:hardwareAccelerated="true"
@@ -50,12 +50,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="com.itechsoftsolutions.mtcore.braintree" />
+                <data android:scheme="com.diaryofrifat.thecounter.braintree" />
             </intent-filter>
         </activity>
 
         <service
-            android:name="com.itechsoftsolutions.mtcore.main.data.remote.service.NotificationService"
+            android:name="com.diaryofrifat.thecounter.main.data.remote.service.NotificationService"
             tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -73,19 +73,19 @@
             tools:replace="screenOrientation" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.authentication.welcome.WelcomeActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.welcome.WelcomeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.GradientStatusBar" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.authentication.registration.RegistrationActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.registration.RegistrationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.GradientStatusBar" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.authentication.login.LoginActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.login.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.GradientStatusBar" />
@@ -103,7 +103,7 @@
             android:theme="@style/AppTheme.GradientStatusBar" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.landing.container.ContainerActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.landing.container.ContainerActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"
@@ -128,19 +128,19 @@
             android:theme="@style/AppTheme.GradientStatusBar" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.others.fullscreenphoto.PhotoFullScreenActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.others.fullscreenphoto.PhotoFullScreenActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.GradientStatusBar" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.authentication.forgotpassword.ForgotPasswordActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.forgotpassword.ForgotPasswordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.GradientStatusBar" />
 
         <activity
-            android:name="com.itechsoftsolutions.mtcore.main.ui.app.authentication.splash.SplashActivity"
+            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>

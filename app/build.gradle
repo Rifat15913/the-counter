@@ -16,7 +16,7 @@ android {
     buildToolsVersion rootProject.ext.build_tools_version
 
     defaultConfig {
-        applicationId 'com.itechsoftsolutions.mtcore'
+        applicationId 'com.diaryofrifat.thecounter'
         minSdkVersion rootProject.ext.minimum_sdk_version
         targetSdkVersion rootProject.ext.target_sdk_version
 

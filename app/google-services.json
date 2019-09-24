@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:234389815824:android:515a84ab9ab50b65",
         "android_client_info": {
-          "package_name": "com.itechsoftsolutions.mtcore"
+          "package_name": "com.diaryofrifat.thecounter"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "234389815824-omp2eogtfkuh5lpcb68112o1adca7m1j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.itechsoftsolutions.mtcore",
+            "package_name": "com.diaryofrifat.thecounter",
             "certificate_hash": "43e9dfd83875b1e482e43ab620cae8cd20c8e835"
           }
         },
