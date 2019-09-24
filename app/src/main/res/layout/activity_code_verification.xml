@@ -97,7 +97,7 @@
                     android:layout_marginEnd="@dimen/margin_32"
                     android:cursorVisible="false"
                     android:digits="1234567890"
-                    android:fontFamily="@font/medium"
+                    android:fontFamily="@font/semi_bold"
                     android:gravity="center_vertical"
                     android:inputType="number"
                     android:maxLength="6"

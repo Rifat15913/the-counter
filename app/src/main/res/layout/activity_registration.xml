@@ -314,7 +314,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_4"
-                        android:fontFamily="@font/medium"
+                        android:fontFamily="@font/semi_bold"
                         android:gravity="center"
                         android:text="@string/registration_login"
                         android:textAllCaps="false"

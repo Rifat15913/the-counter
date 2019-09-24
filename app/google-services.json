@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "234389815824",
-    "firebase_url": "https://mtcore-e2f7a.firebaseio.com",
-    "project_id": "mtcore-e2f7a",
-    "storage_bucket": "mtcore-e2f7a.appspot.com"
+    "project_number": "1026678946403",
+    "firebase_url": "https://the-counter-fe591.firebaseio.com",
+    "project_id": "the-counter-fe591",
+    "storage_bucket": "the-counter-fe591.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:234389815824:android:515a84ab9ab50b65",
+        "mobilesdk_app_id": "1:1026678946403:android:e74b4c8cb91a302211d656",
         "android_client_info": {
           "package_name": "com.diaryofrifat.thecounter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "234389815824-omp2eogtfkuh5lpcb68112o1adca7m1j.apps.googleusercontent.com",
+          "client_id": "1026678946403-5tfv3vr2ishp1j75is58et5m3kaogtk1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.diaryofrifat.thecounter",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "234389815824-5uh7ur05ucjf7hr0br84kuimjkfmhdo9.apps.googleusercontent.com",
+          "client_id": "1026678946403-ipkkgmbdg3n4qsde2k4rka4atqud3l19.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBpW4h3E5gOYARIl8Byp_Sb8w9m73gxVN8"
+          "current_key": "AIzaSyBxD6a8zYD7osxQUuocETEh-qsm3fWvBWM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "234389815824-5uh7ur05ucjf7hr0br84kuimjkfmhdo9.apps.googleusercontent.com",
+              "client_id": "1026678946403-ipkkgmbdg3n4qsde2k4rka4atqud3l19.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

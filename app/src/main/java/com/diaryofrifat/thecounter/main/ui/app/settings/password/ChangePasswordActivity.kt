@@ -55,7 +55,7 @@ class ChangePasswordActivity : BaseActivity<ChangePasswordMvpView, ChangePasswor
             getString(R.string.change_password_confirm_password)
 
         val desiredInputType = (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
-        val desiredTypeface = ViewUtils.getFont(R.font.medium)
+        val desiredTypeface = ViewUtils.getFont(R.font.semi_bold)
 
         edit_text_old_password.inputType = desiredInputType
         edit_text_old_password.typeface = desiredTypeface

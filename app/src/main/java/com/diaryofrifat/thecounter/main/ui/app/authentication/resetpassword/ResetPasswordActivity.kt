@@ -60,7 +60,7 @@ class ResetPasswordActivity : BaseActivity<ResetPasswordMvpView, ResetPasswordPr
         mBinding.textInputLayoutConfirmPassword.hint = getString(R.string.reset_password_confirm_password)
 
         val desiredInputType = (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
-        val desiredTypeface = ViewUtils.getFont(R.font.medium)
+        val desiredTypeface = ViewUtils.getFont(R.font.semi_bold)
 
         mBinding.editTextPassword.inputType = desiredInputType
         mBinding.editTextPassword.typeface = desiredTypeface

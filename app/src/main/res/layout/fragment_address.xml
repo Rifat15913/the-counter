@@ -26,7 +26,7 @@
                 android:textColor="@color/colorTextRegularSecondary"
                 android:textColorHint="@color/colorTextHint"
                 android:textSize="@dimen/text_small_body"
-                app:fontFamily="@font/medium"
+                app:fontFamily="@font/semi_bold"
                 app:layout_constraintBottom_toTopOf="@+id/spinner_country"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
