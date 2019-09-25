@@ -1,11 +1,18 @@
 package com.diaryofrifat.thecounter.main.ui.app.landing.counter
 
+import android.view.View
 import com.diaryofrifat.thecounter.R
 import com.diaryofrifat.thecounter.main.ui.app.landing.container.ContainerActivity
 import com.diaryofrifat.thecounter.main.ui.base.component.BaseFragment
+import com.diaryofrifat.thecounter.utils.helper.Constants
+import com.diaryofrifat.thecounter.utils.helper.SharedPrefUtils
 import com.diaryofrifat.thecounter.utils.helper.ViewUtils
+import kotlinx.android.synthetic.main.fragment_counter.*
 
 class CounterFragment : BaseFragment<CounterMvpView, CounterPresenter>(), CounterMvpView {
+
+    private var count: Long = 0
+
     override val layoutId: Int
         get() = R.layout.fragment_counter
 
@@ -15,6 +22,7 @@ class CounterFragment : BaseFragment<CounterMvpView, CounterPresenter>(), Counte
 
     override fun startUI() {
         initialize()
+        setListeners()
     }
 
     private fun initialize() {
@@ -38,7 +46,58 @@ class CounterFragment : BaseFragment<CounterMvpView, CounterPresenter>(), Counte
         }
     }
 
+    private fun setListeners() {
+        setClickListener(button_minus, button_plus)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        count = SharedPrefUtils.readLong(Constants.PreferenceKeys.CURRENT_COUNT)
+        setCount()
+    }
+
+    private fun setCount() {
+        text_view_count.text = count.toString()
+
+        text_view_times.text = getString(
+            if (count < 2) {
+                R.string.counter_time
+            } else {
+                R.string.counter_times
+            }
+        )
+    }
+
     override fun stopUI() {
 
+    }
+
+    override fun onStop() {
+        super.onStop()
+        SharedPrefUtils.write(Constants.PreferenceKeys.CURRENT_COUNT, count)
+    }
+
+    override fun onClick(view: View) {
+        super.onClick(view)
+
+        when (view.id) {
+            R.id.button_minus -> {
+                if (count > 0) {
+                    count -= 1
+                    setCount()
+                }
+            }
+
+            R.id.button_plus -> {
+                count += 1
+                setCount()
+            }
+        }
+    }
+
+    fun resetCount() {
+        count = 0
+        setCount()
     }
 }

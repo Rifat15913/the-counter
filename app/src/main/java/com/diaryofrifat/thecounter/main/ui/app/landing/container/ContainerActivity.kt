@@ -60,7 +60,15 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
 
     override fun onClick(view: View) {
         when (view.id) {
-
+            R.id.image_view_second_action -> {
+                when (view.tag) {
+                    getString(R.string.container_reset) -> {
+                        if (currentFragment is CounterFragment) {
+                            (currentFragment as CounterFragment).resetCount()
+                        }
+                    }
+                }
+            }
         }
     }
 

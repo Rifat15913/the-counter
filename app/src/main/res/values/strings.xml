@@ -34,6 +34,12 @@
     <string name="container_search">Search</string>
     <string name="container_reset">Reset</string>
 
+    <!--Counter page-->
+    <string name="counter_times">Times</string>
+    <string name="counter_time">Time</string>
+    <string name="counter_plus">+</string>
+    <string name="counter_minus">–</string>
+
     <!--Settings page-->
     <string name="settings_share">Share</string>
 

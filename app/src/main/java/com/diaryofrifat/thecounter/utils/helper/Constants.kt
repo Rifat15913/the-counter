@@ -305,6 +305,7 @@ class Constants {
 
     class PreferenceKeys {
         companion object {
+            const val CURRENT_COUNT = "current_count"
             const val FCM_TOKEN = "fcm_token"
             const val LOGGED_IN = "logged_in"
             const val IS_FIRST_TIME = "is_first_time"
