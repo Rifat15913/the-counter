@@ -2,10 +2,16 @@ package com.diaryofrifat.thecounter.main.ui.app.landing.container
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.view.View
 import com.diaryofrifat.thecounter.R
+import com.diaryofrifat.thecounter.main.ui.app.landing.counter.CounterFragment
+import com.diaryofrifat.thecounter.main.ui.app.landing.history.HistoryFragment
+import com.diaryofrifat.thecounter.main.ui.app.landing.settings.SettingsFragment
 import com.diaryofrifat.thecounter.main.ui.base.component.BaseActivity
+import com.diaryofrifat.thecounter.main.ui.base.makeItGone
+import com.diaryofrifat.thecounter.main.ui.base.makeItVisible
 import com.diaryofrifat.thecounter.utils.helper.ViewUtils
 import kotlinx.android.synthetic.main.activity_container.*
 
@@ -44,12 +50,12 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
     }
 
     override fun onBackPressed() {
-        /*if (currentFragment is DashboardFragment) {
+        if (currentFragment is CounterFragment) {
             finish()
             super.onBackPressed()
         } else {
-            // visitDashboard()
-        }*/
+            visitCounter()
+        }
     }
 
     override fun onClick(view: View) {
@@ -64,6 +70,24 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
 
     private fun setListeners() {
         setClickListener(image_view_first_action, image_view_second_action)
+
+        bottom_bar.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.action_counter -> {
+                    visitCounter()
+                }
+
+                R.id.action_history -> {
+                    visitHistory()
+                }
+
+                R.id.action_settings -> {
+                    visitSettings()
+                }
+            }
+
+            true
+        }
     }
 
     private fun initialize() {
@@ -80,13 +104,50 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
         // Handle navigation bar color
         ViewUtils.setLightSystemNavigationBar(this)
         ViewUtils.setSystemNavigationBarColor(this, R.color.colorPrimary)
+
+        // Handle initial page setup
+        visitCounter()
     }
 
     fun setPageTitle(title: String) {
         text_view_title.text = title
     }
 
-    fun visitDashboard() {
-        //commitFragment(R.id.constraint_layout_full_fragment_container, DashboardFragment())
+    fun setFirstAction(drawable: Drawable, tag: String) {
+        image_view_first_action.setImageDrawable(drawable)
+        image_view_first_action.tag = tag
+    }
+
+    fun setSecondAction(drawable: Drawable, tag: String) {
+        image_view_second_action.setImageDrawable(drawable)
+        image_view_second_action.tag = tag
+    }
+
+    fun isVisibleFirstAction(isVisible: Boolean) {
+        if (isVisible) {
+            image_view_first_action.makeItVisible()
+        } else {
+            image_view_first_action.makeItGone()
+        }
+    }
+
+    fun isVisibleSecondAction(isVisible: Boolean) {
+        if (isVisible) {
+            image_view_second_action.makeItVisible()
+        } else {
+            image_view_second_action.makeItGone()
+        }
+    }
+
+    fun visitCounter() {
+        commitFragment(R.id.constraint_layout_fragment_container, CounterFragment())
+    }
+
+    fun visitHistory() {
+        commitFragment(R.id.constraint_layout_fragment_container, HistoryFragment())
+    }
+
+    fun visitSettings() {
+        commitFragment(R.id.constraint_layout_fragment_container, SettingsFragment())
     }
 }

@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_16"
                 android:gravity="start|center_vertical"
-                android:text="@string/container_counter"
+                tools:text="@string/container_counter"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/text_headline"
@@ -44,7 +44,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/image_view_second_action"
                 app:layout_constraintStart_toEndOf="@+id/text_view_title"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/selector_ic_search"
+                tools:srcCompat="@drawable/selector_ic_search"
                 tools:ignore="ContentDescription" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -57,7 +57,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_view_first_action"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/selector_ic_reset"
+                tools:srcCompat="@drawable/selector_ic_reset"
                 tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
