@@ -12,7 +12,7 @@
             android:id="@+id/constraint_layout_head_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/view_separator_1"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_fragment_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +23,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_16"
                 android:gravity="start|center_vertical"
-                tools:text="@string/container_counter"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/text_headline"
@@ -31,7 +30,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/image_view_first_action"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/container_counter" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/image_view_first_action"
@@ -44,8 +44,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/image_view_second_action"
                 app:layout_constraintStart_toEndOf="@+id/text_view_title"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/selector_ic_search"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@drawable/selector_ic_search" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/image_view_second_action"
@@ -57,55 +57,64 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_view_first_action"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/selector_ic_reset"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@drawable/selector_ic_reset" />
+
+            <View
+                android:id="@+id/view_separator_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorSeparator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/view_separator_1"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="@color/colorSeparator"
-            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_fragment_container"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_head_container" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_layout_fragment_container"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/view_separator_2"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_tail_container"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_head_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_separator_1" />
+            app:layout_constraintVertical_weight="1" />
 
-        <View
-            android:id="@+id/view_separator_2"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="@color/colorSeparator"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_fragment_container" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_bar"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_tail_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/colorPrimary"
-            app:itemIconTint="@color/bottom_bar_item_color"
-            app:itemTextAppearanceActive="@style/TextAppearanceBottomBarItem"
-            app:itemTextAppearanceInactive="@style/TextAppearanceBottomBarItem"
-            app:itemTextColor="@color/bottom_bar_item_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_separator_2"
-            app:menu="@menu/bottom_navigation_menu" />
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_fragment_container">
+
+            <View
+                android:id="@+id/view_separator_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorSeparator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:itemIconTint="@color/bottom_bar_item_color"
+                app:itemTextAppearanceActive="@style/TextAppearanceBottomBarItem"
+                app:itemTextAppearanceInactive="@style/TextAppearanceBottomBarItem"
+                app:itemTextColor="@color/bottom_bar_item_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_separator_2"
+                app:menu="@menu/bottom_navigation_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

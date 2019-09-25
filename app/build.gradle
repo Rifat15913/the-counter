@@ -69,10 +69,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Core with kotlin extension
-    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.core:core-ktx:1.1.0'
 
     // Core library
-    implementation 'androidx.core:core:1.0.2'
+    implementation 'androidx.core:core:1.1.0'
 
     // Add .jar libraries from external folder
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -94,10 +94,10 @@ dependencies {
 
     // Android support libraries
     // Appcompat
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 
     // Design library
-    implementation "com.google.android.material:material:$rootProject.ext.androidx_version"
+    implementation "com.google.android.material:material:1.1.0-alpha10"
 
     // RecyclerView
     implementation "androidx.recyclerview:recyclerview:$rootProject.ext.androidx_version"
@@ -110,10 +110,10 @@ dependencies {
     implementation "androidx.exifinterface:exifinterface:$rootProject.ext.androidx_version"
 
     // Support vector drawable
-    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
 
     // Animated vector drawable
-    implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.ext.androidx_version"
+    implementation "androidx.vectordrawable:vectordrawable-animated:1.1.0"
 
     // Constraint layout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'

@@ -91,10 +91,12 @@ class AlertDialogUtils private constructor() {
         }
 
         mAlertDialog?.getButton(DialogInterface.BUTTON_POSITIVE)?.setTextColor(
-                ViewUtils.getColor(R.color.colorPrimary))
+            ViewUtils.getColor(R.color.colorAccent)
+        )
 
         mAlertDialog?.getButton(DialogInterface.BUTTON_NEGATIVE)?.setTextColor(
-                ViewUtils.getColor(R.color.colorPrimary))
+            ViewUtils.getColor(R.color.colorAccent)
+        )
 
         return mAlertDialog
     }

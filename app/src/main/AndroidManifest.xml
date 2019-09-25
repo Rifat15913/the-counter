@@ -33,34 +33,9 @@
                 android:resource="@xml/file_provider_paths" />
         </provider>
 
-        <!--<meta-data
-            android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_app_icon" />-->
-
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"
             android:value="true" />
-
-        <activity
-            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
-            android:launchMode="singleTask">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="com.diaryofrifat.thecounter.braintree" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name="com.diaryofrifat.thecounter.main.data.remote.service.NotificationService"
-            tools:ignore="ExportedService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
 
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
@@ -68,76 +43,10 @@
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="fullSensor"
-            tools:replace="screenOrientation" />
-
-        <activity
-            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.welcome.WelcomeActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.registration.RegistrationActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.login.LoginActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name=".main.ui.app.authentication.verification.CodeVerificationActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name=".main.ui.app.authentication.resetpassword.ResetPasswordActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
             android:name="com.diaryofrifat.thecounter.main.ui.app.landing.container.ContainerActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name=".main.ui.app.wallets.mtcoredetails.container.MtcoreDetailsContainerActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name=".main.ui.app.wallets.biddetails.activity.BidHistoryActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name=".main.ui.app.wallets.pointdetails.activity.PointHistoryActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name="com.diaryofrifat.thecounter.main.ui.app.others.fullscreenphoto.PhotoFullScreenActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.forgotpassword.ForgotPasswordActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name="com.diaryofrifat.thecounter.main.ui.app.authentication.splash.SplashActivity"
@@ -149,18 +58,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".main.ui.app.settings.password.ChangePasswordActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
-
-        <activity
-            android:name=".main.ui.app.software.buysoftware.BuySoftwareActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GradientStatusBar" />
 
     </application>
 

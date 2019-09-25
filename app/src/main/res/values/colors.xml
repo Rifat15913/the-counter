@@ -11,6 +11,7 @@
 
     <!--Extra colors-->
     <color name="colorNegativeRed">#BB3326</color>
+    <color name="colorOffWhiteLayer">#F2F3F5</color>
     <color name="colorBottomBarItemEnabled">#01875F</color>
     <color name="colorBottomBarItemDisabled">#5F6368</color>
     <color name="colorSeparator">#DADCE0</color>

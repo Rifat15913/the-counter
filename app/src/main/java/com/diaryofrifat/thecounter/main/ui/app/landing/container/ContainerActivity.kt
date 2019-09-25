@@ -1,6 +1,7 @@
 package com.diaryofrifat.thecounter.main.ui.app.landing.container
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Build
@@ -10,6 +11,7 @@ import com.diaryofrifat.thecounter.main.ui.app.landing.counter.CounterFragment
 import com.diaryofrifat.thecounter.main.ui.app.landing.history.HistoryFragment
 import com.diaryofrifat.thecounter.main.ui.app.landing.settings.SettingsFragment
 import com.diaryofrifat.thecounter.main.ui.base.component.BaseActivity
+import com.diaryofrifat.thecounter.main.ui.base.helper.AlertDialogUtils
 import com.diaryofrifat.thecounter.main.ui.base.makeItGone
 import com.diaryofrifat.thecounter.main.ui.base.makeItVisible
 import com.diaryofrifat.thecounter.utils.helper.ViewUtils
@@ -64,7 +66,22 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
                 when (view.tag) {
                     getString(R.string.container_reset) -> {
                         if (currentFragment is CounterFragment) {
-                            (currentFragment as CounterFragment).resetCount()
+                            AlertDialogUtils.on().showNativeDialog(
+                                this@ContainerActivity,
+                                true,
+                                getString(R.string.yes),
+                                DialogInterface.OnClickListener { dialog, _ ->
+                                    dialog.dismiss()
+                                    (currentFragment as CounterFragment).resetCount()
+                                },
+                                getString(R.string.no),
+                                DialogInterface.OnClickListener { dialog, _ ->
+                                    dialog.dismiss()
+                                },
+                                getString(R.string.are_you_sure),
+                                null,
+                                null
+                            )
                         }
                     }
                 }
