@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <integer name="debounce_time_out">500</integer>
-    <integer name="character_min_limit_password">8</integer>
-    <integer name="single_line">1</integer>
-    <integer name="blank_password">0</integer>
-    <integer name="weak_password">6</integer>
-    <integer name="normal_password">10</integer>
-    <integer name="page_one">1</integer>
-</resources>
+<resources></resources>

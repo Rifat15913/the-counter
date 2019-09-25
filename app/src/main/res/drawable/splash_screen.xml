@@ -3,7 +3,7 @@
     android:opacity="opaque">
 
     <item
-        android:drawable="@color/colorPrimary"
+        android:drawable="@drawable/common_background"
         android:gravity="fill" />
 
     <item>

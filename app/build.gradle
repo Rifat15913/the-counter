@@ -118,9 +118,6 @@ dependencies {
     // Constraint layout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
 
-    // Circular ImageView
-    implementation 'com.mikhaellopez:circularimageview:3.2.0'
-
     // Glide (Image loader)
     implementation 'com.github.bumptech.glide:glide:4.9.0'
 
@@ -137,16 +134,6 @@ dependencies {
 
     // Gson to convert from and to json
     implementation 'com.google.code.gson:gson:2.8.5'
-
-    // Circle indicator
-    implementation 'me.relex:circleindicator:2.1.2'
-
-    // Pin Entry EditText for code verification
-    implementation ('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
-        // Exclude is only needed if you already have
-        // androidx.appcompat as a dependency in your app.
-        exclude group: 'androidx.appcompat', module: 'appcompat'
-    }
 
     // RxBinding with Views
     // Platform bindings
@@ -182,32 +169,10 @@ dependencies {
 
     // Firebase
     implementation 'com.google.firebase:firebase-core:17.2.0'
-    implementation 'com.google.firebase:firebase-messaging:20.0.0'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-
-    // Bar code generation
-    implementation 'com.google.zxing:core:3.3.3'
-    implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
-
-    // To load .svg format images
-    implementation 'com.caverock:androidsvg-aar:1.4'
-    kapt 'com.github.bumptech.glide:compiler:4.9.0'
-
-    // Image compressor
-    implementation 'id.zelory:compressor:2.1.0'
 
     // App data storage
     debugImplementation 'com.awesomedroidapps:inappstoragereader:1.0.2'
-
-    // PDF picker and viewer
-    implementation 'com.nbsp:library:1.8'
-
-    // Google wallet
-    implementation 'com.google.android.gms:play-services-wallet:18.0.0'
-
-    // Braintree
-    implementation 'com.braintreepayments.api:braintree:2.22.0'
-    implementation 'com.braintreepayments.api:google-payment:2.0.1'
 
     // Testing
     testImplementation 'junit:junit:4.12'

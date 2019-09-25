@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Braintree Sandbox-->
-    <string name="tokenization_key" translatable="false">sandbox_x68cfm6c_y3yksnpgkmg5vw9x</string>
+
 </resources>

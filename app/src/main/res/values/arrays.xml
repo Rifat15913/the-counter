@@ -1,45 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="ranking_history">
-        <item>@string/my_rankings_seller_points_history</item>
-        <item>@string/my_rankings_consumer_points_history</item>
-        <item>@string/my_rankings_biderator_points_history</item>
-    </string-array>
 
-    <string-array name="ranking_session_others">
-        <item>@string/dashboard_monthly</item>
-        <item>@string/dashboard_yearly</item>
-    </string-array>
-
-    <string-array name="ranking_session_seller">
-        <item>@string/dashboard_monthly</item>
-    </string-array>
-
-    <string-array name="ranking_actor_types">
-        <item>@string/ranking_list_top_sellers</item>
-        <item>@string/ranking_list_top_consumers</item>
-        <item>@string/ranking_list_top_biderators</item>
-    </string-array>
-
-    <string-array name="i_am">
-        <item>@string/personal_info_individual</item>
-        <item>@string/personal_info_company</item>
-    </string-array>
-
-    <string-array name="gender">
-        <item>@string/personal_info_male</item>
-        <item>@string/personal_info_female</item>
-    </string-array>
-
-    <string-array name="marital_state">
-        <item>@string/personal_info_single</item>
-        <item>@string/personal_info_married</item>
-        <item>@string/personal_info_divorced</item>
-        <item>@string/personal_info_widow</item>
-    </string-array>
-
-    <string-array name="uploading_options">
-        <item>@string/software_license_photo</item>
-        <item>@string/software_license_pdf</item>
-    </string-array>
 </resources>

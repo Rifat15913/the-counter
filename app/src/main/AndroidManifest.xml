@@ -33,9 +33,9 @@
                 android:resource="@xml/file_provider_paths" />
         </provider>
 
-        <meta-data
+        <!--<meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_app_icon" />
+            android:resource="@drawable/ic_app_icon" />-->
 
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"

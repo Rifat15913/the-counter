@@ -29,15 +29,7 @@ class Constants {
 
     class Common {
         companion object {
-            const val STATUS_ADMIN_PENDING = "admin_pending"
-            const val STATUS_USER_PENDING = "user_pending"
-            const val STATUS_CONFIRM = "confirm"
-            const val STATUS_USER_PHOTO_ID_SUBMITTED = 2
-            const val STATUS_USER_PHOTO_ID_APPROVED = 1
-            const val STATUS_USER_PHOTO_ID_REJECTED = 3
-            const val STATUS_USER_PHOTO_ID_PENDING = 0
             const val REGEX_PASSWORD = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+\$).{8,}\$"
-            const val REGEX_PDF_FILE = ".*\\.pdf$"
             const val ANDROID_HASH_KEY = "Hash Key"
             const val COMMON_TIME_ZONE = "UTC"
             const val APP_COMMON_DATE_FORMAT: String = "yyyy-MM-dd HH:mm:ss"

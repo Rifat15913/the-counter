@@ -350,5 +350,47 @@ class ViewUtils {
                 window.decorView.systemUiVisibility = modifiedFlags
             }
         }
+
+        /**
+         * This method sets system navigation bar color
+         *
+         * @param activity current activity
+         * @param colorResourceId color resource id
+         * */
+        fun setSystemNavigationBarColor(activity: AppCompatActivity, colorResourceId: Int) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && colorResourceId > -1) {
+                val window = activity.window
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.navigationBarColor = getColor(colorResourceId)
+            }
+        }
+
+        /**
+         * This method clears the light state of system navigation bar
+         *
+         * @param activity current activity
+         * */
+        fun clearLightSystemNavigationBar(activity: Activity) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+                val window = activity.window
+                val flags = window.decorView.systemUiVisibility
+                val modifiedFlags = flags and (View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR.inv())
+                window.decorView.systemUiVisibility = modifiedFlags
+            }
+        }
+
+        /**
+         * This method sets the light state of system navigation bar
+         *
+         * @param activity current activity
+         * */
+        fun setLightSystemNavigationBar(activity: Activity) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+                val window = activity.window
+                val flags = window.decorView.systemUiVisibility
+                val modifiedFlags = flags or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                window.decorView.systemUiVisibility = modifiedFlags
+            }
+        }
     }
 }
