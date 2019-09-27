@@ -18,8 +18,6 @@ class HistoryFragment : BaseFragment<HistoryMvpView, HistoryPresenter>(), Histor
     }
 
     private fun initialize() {
-        (activity as ContainerActivity).setPageTitle(getString(R.string.container_history))
-
         (activity as ContainerActivity).isVisibleFirstAction(false)
         (activity as ContainerActivity).isVisibleSecondAction(true)
 

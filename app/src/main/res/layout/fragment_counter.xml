@@ -5,8 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorAccent50">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_view_count"
@@ -15,6 +14,7 @@
             android:gravity="center"
             android:paddingStart="@dimen/padding_32"
             android:paddingEnd="@dimen/padding_32"
+            app:layout_constraintVertical_chainStyle="packed"
             android:textColor="@color/colorTextRegular"
             android:textSize="64sp"
             app:fontFamily="@font/bold"
@@ -22,84 +22,60 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
             tools:text="10" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_view_times"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_32"
             android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_minus"
             android:textColor="@color/colorTextRegular"
             android:textSize="@dimen/text_super_extra_focus"
             app:fontFamily="@font/bold"
-            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_controller_container"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_count"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_count"
             tools:text="Times" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_layout_controller_container"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_minus"
+            android:layout_width="@dimen/width_80"
+            android:layout_height="@dimen/height_80"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:gravity="center"
+            android:stateListAnimator="@animator/card_animator_with_translationz"
+            android:text="@string/counter_minus"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_focus"
+            app:fontFamily="@font/semi_bold"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_times"
+            app:layout_constraintVertical_bias="0.0"
+            tools:targetApi="lollipop" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_plus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_32"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_times">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_minus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/semi_bold"
-                android:paddingStart="@dimen/padding_50"
-                android:paddingEnd="@dimen/padding_50"
-                android:stateListAnimator="@animator/card_animator_with_translationz"
-                android:text="@string/counter_minus"
-                android:textSize="@dimen/text_headline"
-                app:backgroundTint="@color/colorNegativeRed"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button_plus"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:targetApi="lollipop" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/semi_bold"
-                android:paddingStart="@dimen/padding_50"
-                android:paddingEnd="@dimen/padding_50"
-                android:stateListAnimator="@animator/card_animator_with_translationz"
-                android:text="@string/counter_plus"
-                android:textSize="@dimen/text_headline"
-                app:backgroundTint="@color/colorAccent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button_minus"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:targetApi="lollipop" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_16"
-            android:text="@string/counter_save"
+            android:layout_marginBottom="-100dp"
+            android:gravity="center"
+            android:padding="@dimen/padding_40"
+            android:stateListAnimator="@animator/card_animator_with_translationz"
+            android:text="@string/counter_plus"
             android:textColor="@color/colorPrimary"
-            app:backgroundTint="@color/colorAccent"
-            app:icon="@drawable/ic_save_white"
-            app:iconTint="@color/colorPrimary"
+            android:textSize="30sp"
+            app:fontFamily="@font/semi_bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="1.0"
+            tools:targetApi="lollipop" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

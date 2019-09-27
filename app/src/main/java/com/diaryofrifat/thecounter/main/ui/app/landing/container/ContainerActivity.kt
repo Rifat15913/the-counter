@@ -165,14 +165,17 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
     }
 
     fun visitCounter() {
+        setPageTitle(getString(R.string.container_counter))
         commitFragment(R.id.constraint_layout_fragment_container, CounterFragment())
     }
 
     fun visitHistory() {
+        setPageTitle(getString(R.string.container_history))
         commitFragment(R.id.constraint_layout_fragment_container, HistoryFragment())
     }
 
     fun visitSettings() {
+        setPageTitle(getString(R.string.container_settings))
         commitFragment(R.id.constraint_layout_fragment_container, SettingsFragment())
     }
 }

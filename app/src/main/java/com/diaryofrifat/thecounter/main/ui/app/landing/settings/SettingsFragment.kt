@@ -18,8 +18,6 @@ class SettingsFragment : BaseFragment<SettingsMvpView, SettingsPresenter>(), Set
     }
 
     private fun initialize() {
-        (activity as ContainerActivity).setPageTitle(getString(R.string.container_settings))
-
         (activity as ContainerActivity).isVisibleFirstAction(false)
         (activity as ContainerActivity).isVisibleSecondAction(true)
 

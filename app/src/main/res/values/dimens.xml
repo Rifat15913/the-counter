@@ -10,7 +10,7 @@
 
     <!--Text size dimensions-->
     <dimen name="text_super_extra_focus">30sp</dimen>
-    <dimen name="text_extra_focus">24sp</dimen>
+    <dimen name="text_extra_focus">26sp</dimen>
     <dimen name="text_focus">24sp</dimen>
     <dimen name="text_headline">22sp</dimen>
     <dimen name="text_large_title">20sp</dimen>
