@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.diaryofrifat.thecounter.R
 import com.diaryofrifat.thecounter.main.ui.app.landing.counter.CounterFragment
 import com.diaryofrifat.thecounter.main.ui.app.landing.history.HistoryFragment
@@ -16,6 +17,7 @@ import com.diaryofrifat.thecounter.main.ui.base.makeItGone
 import com.diaryofrifat.thecounter.main.ui.base.makeItVisible
 import com.diaryofrifat.thecounter.utils.helper.ViewUtils
 import kotlinx.android.synthetic.main.activity_container.*
+import kotlinx.android.synthetic.main.alert_dialog_save_count.view.*
 
 
 class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
@@ -33,6 +35,8 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
             runCurrentActivity(context, intent)
         }
     }
+
+    private var mDialogView: View? = null
 
     override val layoutResourceId: Int
         get() = R.layout.activity_container
@@ -62,6 +66,27 @@ class ContainerActivity : BaseActivity<ContainerMvpView, ContainerPresenter>() {
 
     override fun onClick(view: View) {
         when (view.id) {
+            R.id.image_view_first_action -> {
+                when (view.tag) {
+                    getString(R.string.container_save) -> {
+                        val dialogBuilder = AlertDialog.Builder(this)
+                        mDialogView = layoutInflater.inflate(
+                            R.layout.alert_dialog_save_count,
+                            null, false
+                        )
+
+                        dialogBuilder.setView(mDialogView)
+                        dialogBuilder.setCancelable(false)
+                        val dialog = dialogBuilder.create()
+                        dialog.show()
+
+                        mDialogView?.image_view_close?.setOnClickListener {
+                            dialog.dismiss()
+                        }
+                    }
+                }
+            }
+
             R.id.image_view_second_action -> {
                 when (view.tag) {
                     getString(R.string.container_reset) -> {
