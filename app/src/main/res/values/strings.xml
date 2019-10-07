@@ -43,6 +43,8 @@
     <string name="counter_time">Time</string>
     <string name="counter_plus">+</string>
     <string name="counter_minus">–</string>
+    <string name="counter_title_hint">Title</string>
+    <string name="counter_description_hint">Description (Optional)</string>
 
     <!--Settings page-->
     <string name="settings_share">Share</string>
