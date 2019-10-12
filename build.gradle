@@ -18,7 +18,7 @@ buildscript {
         classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:$dokka_version"
-        classpath 'com.google.gms:google-services:4.3.1'
+        classpath 'com.google.gms:google-services:4.3.2'
         classpath 'io.fabric.tools:gradle:1.31.0'
     }
 }
@@ -40,9 +40,9 @@ ext{
     // Does not support RTL (Right to left; i.e. Arabic), if (min SDK < 17)
     minimum_sdk_version = 17
     androidx_version = '1.0.0'
-    lifecycle_version = '2.0.0'
+    lifecycle_version = '2.1.0'
     rxbinding_version = '2.2.0'
-    room_version = '2.1.0'
+    room_version = '2.2.0'
     osmdroid_version = '6.1.0'
     retrofit_version = '2.4.0'
     butterknife_version = '8.8.1'
